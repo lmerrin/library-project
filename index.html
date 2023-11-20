@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Link to Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>My Library</h1>
+
+      <p>
+        This project is for
+        <a href="www.theodinproject.com">The Odin Project</a> in which I had to
+        make a library using <i>Object Constructors</i> and
+        <i>Local Storage</i> you can also view the GitHub repo for this project
+      </p>
+
+      <button id="new-book-btn">New Book</button>
+    </header>
+
+    <dialog>
+      <div id="new-book-form" class="new-book-form">
+        <button id="close-dialog-btn">X</button>
+        <form method="dialog" id="book-form">
+          <div class="input-field">
+            <label for="title">Title:</label>
+            <input type="text" id="title" required />
+          </div>
+
+          <div class="input-field">
+            <label for="author">Author:</label>
+            <input type="text" id="author" required />
+          </div>
+
+          <div class="input-field">
+            <div class="input-subfield">
+              <label for="year">Year:</label>
+              <input type="number" id="year" required />
+            </div>
+
+            <div class="input-subfield">
+              <label for="pages">Number of Pages:</label>
+              <input type="number" id="pages" required />
+            </div>
+          </div>
+
+          <div class="input-field">
+            <label for="read">Have you read this book?</label>
+            <select id="read" required>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+
+          <div class="add-book-btn">
+            <button type="submit">Add Book</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
+    <div id="book-container"></div>
+
+    <script src="magic.js"></script>
+  </body>
+</html>

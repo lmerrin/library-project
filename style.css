@@ -1,0 +1,190 @@
+/* COLOR PALETTE */
+:root {
+  --primary: #3498db; /* Modern blue color */
+  --accent: #e74c3c; /* Modern red color */
+  --background: #ecf0f1; /* Light background color */
+  --text: #2c3e50; /* Dark text color */
+}
+
+/* BODY TEXT FONT */
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  padding: 30px;
+}
+
+/* H1 TEXT FONT */
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+p {
+  margin: 20px;
+}
+
+/* ALL BUTTONS */
+button {
+  background-image: linear-gradient(-180deg, #37aee2 0%, #1e96c8 100%);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  padding: 1rem 1.75rem;
+  margin: 20px;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover {
+  background-image: linear-gradient(-180deg, #1d95c9 0%, #17759c 100%);
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 1rem 2rem;
+  }
+}
+
+/* NEW BOOK FORM */
+.new-book-form {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}
+
+/* FORM STYLING */
+.input-field input,
+.select-field select {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  border: 1px solid var(--accent);
+  border-radius: 0.3rem;
+}
+
+.add-book-btn {
+  display: flex;
+  justify-content: center;
+}
+.hidden {
+  display: none;
+}
+
+/* CLOSE BUTTON ON FORM  */
+#close-dialog-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: var(--blue);
+}
+
+/* BOOK DISPLAY */
+.book-card {
+  border: 1px solid #1d95c9;
+  margin-bottom: 20px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 300px; 
+  height: 250px; 
+  overflow: hidden;
+}
+
+/*ALL CONTENTS FLEX IN THE BOX */
+.book-card > * {
+  flex: 1;
+}
+
+.book-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.book-card li {
+  margin-bottom: 10px;
+}
+
+/* BUTTONS IN BOOK CARD */
+.book-card button {
+  background-image: linear-gradient(-180deg, #37aee2 0%, #1e96c8 100%);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.book-card button:hover {
+  background-image: linear-gradient(-180deg, #1d95c9 0%, #17759c 100%);
+}
+
+/* CENTER BUTTONS WITHIN BOOK CARD */
+.book-card button.remove-btn,
+.book-card button.toggle-read-btn {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* ADD SPACE BETWEEN REMOVE AND TOGGLE READ BUTTONS */
+.book-card button.remove-btn {
+  margin-right: 5px; 
+}
+
+/* OVERALL LAYOUT */
+.container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Adjust minmax size as needed */
+  gap: 20px;
+}
+
+/* HEADER STYLES */
+header {
+  text-align: center;
+  padding: 30px;
+  background-color: var(--background); 
+  margin-bottom: 20px;
+}
+
+/* NEW BOOK BUTTON IN HEADER */
+header #new-book-btn {
+  background-color: var(--primary);
+  border-radius: 0.3rem;
+  padding: 1rem 1.75rem;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+header #new-book-btn:hover {
+  background-color: var(--accent);
+}
